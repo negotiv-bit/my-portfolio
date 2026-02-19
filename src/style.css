@@ -150,7 +150,7 @@ h2 {
     transition: width 1.5s ease-in-out;
 }
 
-/* Секция 5: Проекты (Карточки) */
+/* Секция 5: Проекты (Фоновые карточки) */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -158,32 +158,74 @@ h2 {
 }
 
 .card {
-    background: var(--secondary-color);
-    border-radius: 10px;
+    position: relative;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
     overflow: hidden;
     transition: var(--transition);
-    border: 1px solid #252545;
+    border: 1px solid rgba(233, 69, 96, 0.3); /* Цвет акцента с прозрачностью */
+    display: flex;
+    align-items: flex-end;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
     border-color: var(--accent-color);
 }
 
-.card-content {
-    padding: 20px;
+/* Затемнение поверх картинки */
+.card-overlay {
+    background: linear-gradient(to top, 
+        rgba(26, 26, 46, 1) 10%, 
+        rgba(26, 26, 46, 0.6) 50%, 
+        rgba(26, 26, 46, 0.2) 100%);
+    width: 100%;
+    padding: 25px;
+    transition: var(--transition);
+}
+
+.card:hover .card-overlay {
+    background: linear-gradient(to top, 
+        rgba(26, 26, 46, 1) 30%, 
+        rgba(26, 26, 46, 0.7) 60%, 
+        rgba(26, 26, 46, 0.3) 100%);
 }
 
 .card h3 {
-    margin-top: 0;
+    margin: 0 0 10px 0;
     color: var(--accent-color);
+    font-size: 1.4rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
 }
 
 .tech-stack {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--text-muted) !important;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    border: 1px solid var(--accent-color);
+}
+
+.btn-small:hover {
+    background: transparent;
+    color: var(--accent-color);
 }
 
 /* Контакты */

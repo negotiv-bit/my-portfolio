@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио | Кирилл Смирнов</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico"> </head>
-    
+    <link rel="icon" href="favicon.ico">
+</head>
+
 <body>
-    
-    <nav class="navbar"> <ul>
+
+    <nav class="navbar">
+        <ul>
             <li><a href="#home">Главная</a></li>
             <li><a href="#skills">Навыки</a></li>
             <li><a href="#education">Образование</a></li>
@@ -20,25 +23,48 @@
     </nav>
 
     <main>
-        <section id="home" class="hero"> <div class="hero-content">
-                <h1>Привет, я Кирилл Смирнов</h1> <p class="roles">Frontend разработчик | UI дизайнер | Студент</p> <div class="bio">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Привет, я Кирилл Смирнов</h1>
+                <p class="roles">Frontend разработчик | UI дизайнер | Студент</p>
+                <div class="bio">
                     <p>Я увлеченный разработчик с опытом в веб-дизайне и создании мобильных приложений.</p>
-                    <p>Специализируюсь на создании интуитивно понятных интерфейсов в Figma и их реализации на современном стеке технологий.</p>
+                    <p>Специализируюсь на создании интуитивно понятных интерфейсов в Figma и их реализации на
+                        современном стеке технологий.</p>
                 </div>
                 <a href="#contacts" class="btn">Связаться со мной</a>
             </div>
         </section>
 
-        <section id="skills"> <h2>Навыки</h2>
+        <section id="skills">
+            <h2>Навыки</h2>
             <div class="skills-grid">
-                <div class="skill-item"><span>Python</span><div class="bar"><div style="width:70%">70%</div></div></div>
-                <div class="skill-item"><span>C# / Java</span><div class="bar"><div style="width:60%">60%</div></div></div>
-                <div class="skill-item"><span>JavaScript</span><div class="bar"><div style="width:10%">10%</div></div></div>
-                <div class="skill-item"><span>C++</span><div class="bar"><div style="width:40%">40%</div></div></div>
+                <div class="skill-item"><span>Python</span>
+                    <div class="bar">
+                        <div style="width:70%">70%</div>
+                    </div>
+                </div>
+                <div class="skill-item"><span>C# / Java</span>
+                    <div class="bar">
+                        <div style="width:60%">60%</div>
+                    </div>
+                </div>
+                <div class="skill-item"><span>JavaScript</span>
+                    <div class="bar">
+                        <div style="width:10%">10%</div>
+                    </div>
+                </div>
+                <div class="skill-item"><span>C++</span>
+                    <div class="bar">
+                        <div style="width:40%">40%</div>
+                    </div>
+                </div>
             </div>
-            <p><strong>Инструменты:</strong> Figma, Android Studio, Git, Linux, MySQL</p> </section>
+            <p><strong>Инструменты:</strong> Figma, Android Studio, Git, Linux, MySQL</p>
+        </section>
 
-        <section id="education"> <h2>Образование</h2>
+        <section id="education">
+            <h2>Образование</h2>
             <div class="timeline">
                 <div class="entry">
                     <h3>Название ВУЗа/Колледжа</h3>
@@ -51,7 +77,8 @@
             </div>
         </section>
 
-        <section id="achievements"> <h2>Достижения</h2>
+        <section id="achievements">
+            <h2>Достижения</h2>
             <ul>
                 <li><strong>Сертификат Coursera:</strong> [Название курса] - 2025</li>
                 <li><strong>Хакатон:</strong> Участие в региональном этапе - 2024</li>
@@ -59,28 +86,76 @@
             </ul>
         </section>
 
-        <section id="projects"> <h2>Мои проекты</h2>
+        <section id="projects">
+            <h2>Мои проекты</h2>
             <div class="project-cards">
-                <article class="card">
-                    <img src="project1.jpg" alt="Превью проекта 1"> <h3>Название проекта</h3>
-                    <p>Описание твоего готового сайта. Реализованные функции и особенности.</p>
-                    <p>Технологии: HTML, CSS, JS</p>
-                    <div class="links">
-                        <a href="#">GitHub</a> <a href="#">Live Demo</a> </div>
+                <article class="card" style="background-image: url('./img/project1.png');">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3>Проект 2</h3>
+                            <p>Разработка интерактивных мини-игр.</p>
+                            <p class="tech-stack">HTML, CSS, JS</p>
+                            <div class="links">
+                                <a href="./kirill_smir_2/html/main.html" class="btn-small">Смотреть проект</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" style="background-image: url('./img/project2.png');">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3>Проект 3</h3>
+                            <p>Разработка интерактивных мини-игр на js.</p>
+                            <p class="tech-stack">HTML, CSS, JS</p>
+                            <div class="links">
+                                <a href="./kirill_smir_3/html/main.html" class="btn-small">Смотреть проект</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" style="background-image: url('./img/project3.png');">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3>Проект 4</h3>
+                            <p>Разработка интерактивных мини-игр на (виктарина).</p>
+                            <p class="tech-stack">HTML, CSS, JS</p>
+                            <div class="links">
+                                <a href="./kirill_smir_4/html/main.html" class="btn-small">Смотреть проект</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" style="background-image: url('./img/project4.png');">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3>Проект 5</h3>
+                            <p>Шахматы.</p>
+                            <p class="tech-stack">HTML, CSS, JS</p>
+                            <div class="links">
+                                <a href="./kirill_smir_5/html/main.html" class="btn-small">Смотреть проект</a>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section id="contacts"> <h2>Контакты</h2>
+        <section id="contacts">
+            <h2>Контакты</h2>
             <form id="contact-form">
                 <input type="text" id="name" placeholder="Имя" required>
                 <input type="email" id="email" placeholder="Email" required>
                 <textarea id="message" placeholder="Сообщение" required></textarea>
                 <button type="submit">Отправить</button>
             </form>
-            <p>Локация: Павлодар | Email: student@example.com</p> </nav>
+            <p>Локация: Павлодар | Email: student@example.com</p>
+            </nav>
     </main>
 
     <script src="script.js"></script>
 </body>
+
 </html>
