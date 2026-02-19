@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-игры: Практическая №2</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Мои Интерактивные Игры</h1>
+
+    <section class="game-card" id="clicker">
+        <h2> Игра 1: Кликер</h2>
+        <div class="stats">
+            <p>Осталось времени: <span id="time">30</span>s</p>
+            <p>Счёт: <span id="counter">0</span></p>
+            <p>Рекорд: <span id="record">0</span></p>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="btn-main">НАЖМИ МЕНЯ!</button>
+            <button id="reset-btn" class="btn-secondary">Сбросить</button>
+        </div>
+    </section>
+
+    <section class="game-card" id="generator">
+        <h2> Игра 2: Генератор приключений</h2>
+        <div id="adventure-text" class="display-box">
+            Нажми кнопку, чтобы начать приключение!
+        </div>
+        <button id="gen-btn" class="btn-main">Сгенерировать приключение</button>
+        <div id="history" class="history-list"></div>
+    </section>
+
+    <section class="game-card" id="guesser">
+        <h2> Игра 3: Угадай число (1-100)</h2>
+        <div class="stats">
+            <p>Попыток осталось: <span id="attempts-left">10</span></p>
+            <p id="guess-message">Введите число ниже</p>
+        </div>
+        <div class="controls">
+            <input type="number" id="guess-input" placeholder="0-100">
+            <button id="guess-btn" class="btn-main">Проверить</button>
+            <button id="restart-guess" class="btn-secondary" style="display:none;">Играть снова</button>
+        </div>
+    </section>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

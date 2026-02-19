@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа №4 - Мини-игры</title>
+    <link rel="stylesheet" href="/kirill_smir_4/css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Интерактивные игры (Часть 3)</h1>
+
+        <section class="game-container" id="catcher-game">
+            <h2> Игра 1: Поймай предмет</h2>
+            <div class="game-info">
+                <span>Счёт: <b id="score-val">0</b></span>
+                <span>Время: <b id="timer-val">30</b>с</span>
+            </div>
+            <div id="game-field" class="field"></div>
+            <button id="start-catcher" class="btn">Начать игру</button>
+        </section>
+
+        <section class="game-container">
+            <h2> Игра 2: Викторина</h2>
+            <div id="quiz-box">
+                <p id="question-text">Нажмите кнопку, чтобы начать тест.</p>
+                <div id="answers-list" class="answers"></div>
+            </div>
+            <button id="start-quiz" class="btn">Начать викторину</button>
+        </section>
+
+        <section class="game-container">
+            <h2> Игра 3: Найди пару</h2>
+            <div id="memory-grid" class="memory-grid"></div>
+            <button id="restart-memory" class="btn">Сбросить поле</button>
+        </section>
+    </div>
+    <script src="/kirill_smir_4/js/main.js"></script>
+</body>
+</html>

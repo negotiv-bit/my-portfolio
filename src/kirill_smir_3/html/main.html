@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мини-игры Часть 2</title>
+    <link rel="stylesheet" href="/kirill_smir_3/css/main.css">
+</head>
+<body>
+    <div class="main-container">
+        <section class="game-box">
+            <h2>Игра на скорость реакции</h2>
+            <p>Осталось времени: <span id="react-timer">30</span></p>
+            <p>Нажатий: <span id="react-count">0</span></p>
+            <div id="area" class="reaction-area">
+                <button id="target" class="target-btn">Нажми меня!</button>
+            </div>
+            <button id="start-react" class="control-btn">Начать</button>
+            <button id="reset-react" class="control-btn secondary">Сброс</button>
+        </section>
+
+        <section class="game-box">
+            <h2>Крестики-нолики</h2>
+            <div class="ttt-stats">
+                <p>Побед Х: <span id="wins-x">0</span> | Побед О: <span id="wins-o">0</span></p>
+                <label><input type="checkbox" id="ai-mode"> Играть против компьютера</label>
+            </div>
+            <h3 id="ttt-status">Ход X</h3>
+            <div class="ttt-grid">
+                <div class="cell" data-i="0"></div><div class="cell" data-i="1"></div><div class="cell" data-i="2"></div>
+                <div class="cell" data-i="3"></div><div class="cell" data-i="4"></div><div class="cell" data-i="5"></div>
+                <div class="cell" data-i="6"></div><div class="cell" data-i="7"></div><div class="cell" data-i="8"></div>
+            </div>
+            <button id="ttt-new" class="control-btn">Новая игра</button>
+        </section>
+
+        <section class="game-box">
+            <h2>Лабиринт</h2>
+            <p>Время: <span id="maze-timer">0</span> сек</p>
+            <div id="maze-container" class="maze"></div>
+            <button id="maze-start" class="control-btn">Играть снова</button>
+        </section>
+    </div>
+    <script src="/kirill_smir_3/js/main.js"></script>
+</body>
+</html>

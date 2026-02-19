@@ -1,0 +1,216 @@
+/* Общие настройки и переменные */
+:root {
+    --primary-color: #1a1a2e;    /* Темно-синий (фон) */
+    --accent-color: #e94560;     /* Акцентный красный/розовый */
+    --secondary-color: #16213e;  /* Глубокий синий (карточки) */
+    --text-light: #ffffff;
+    --text-muted: #b0b0b0;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #0f3460;
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* Фиксированная навигационная панель */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 26, 46, 0.95);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    color: var(--accent-color);
+}
+
+/* Секция 1: Главная (Hero) */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), 
+                url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease;
+}
+
+.roles {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+    border: 2px solid var(--accent-color);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+}
+
+/* Секция 2: Навыки (Progress Bars) */
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background: #252545;
+    border-radius: 10px;
+    height: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    background: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Секция 5: Проекты (Карточки) */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid #252545;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-color: var(--accent-color);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.tech-stack {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+/* Контакты */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar ul { gap: 10px; }
+    .hero h1 { font-size: 2.5rem; }
+}
